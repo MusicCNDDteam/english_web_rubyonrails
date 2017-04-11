@@ -1,0 +1,9 @@
+<% if quiz_answer.quiz_question.question_type == 'radio' %>
+  <div class="radio">
+    <label><input type="radio"><%= quiz_answer.content %></label>
+  </div>
+<% else %>
+  <div class="checkbox">
+    <label><input type="checkbox"><%= quiz_answer.content %></label>
+  </div>
+<% end %>

@@ -1,0 +1,26 @@
+<% unless !course_author?(@quiz.topic.course) %>
+<h2>Add Questions</h2>
+  <%= form_for(@quiz_question) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <div class="form-group">
+      <%= f.label :name, :class => "control-label" %>
+      <%= f.text_field :name, :class => "form-control"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, :class => "control-label" %>
+      <%= f.text_field :description, :class => "form-control"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :question_type , :class => "control-label" %>
+      <%= f.text_field :question_type, :class => "form-control"%>
+    </div>
+    <%= f.hidden_field  :quiz_id %>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<% end %>

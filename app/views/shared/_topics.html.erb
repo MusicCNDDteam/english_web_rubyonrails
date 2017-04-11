@@ -1,0 +1,12 @@
+<h3>All topics</h3>
+
+
+<ul class="topics list-group">
+  <%= render @topics %>
+</ul>
+
+<div style="padding-top: 15px;">
+  <%= link_to 'New Topic', new_topic_path(:course => @course) , {:class => "primary-link"}%>
+</div>
+
+<br/>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<h2>Topic Information</h2>
+<p>
+  <strong>Name:</strong>
+  <%= @topic.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @topic.description %>
+</p>
+
+
+<%= render 'shared/challenges' %>
+
+<%= render 'shared/word_form' %>
+<%= render 'shared/words'%>
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', @topic.course %>

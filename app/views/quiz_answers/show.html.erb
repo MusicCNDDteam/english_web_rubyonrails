@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @quiz_answer.content %>
+</p>
+
+<p>
+  <strong>Correct:</strong>
+  <%= @quiz_answer.correct %>
+</p>
+
+<%= link_to 'Edit', edit_quiz_answer_path(@quiz_answer) %> |
+<%= link_to 'Back', quiz_answers_path %>

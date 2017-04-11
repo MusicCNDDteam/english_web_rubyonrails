@@ -1,0 +1,25 @@
+<% unless !course_author?(@word.topic.course) %>
+<h2>Add words</h2>
+  <%= form_for(@word) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="form-group">
+      <%= f.label :name, :class => "control-label" %>
+      <%= f.text_field :name, :class => "form-control"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, :class => "control-label" %>
+      <%= f.text_field :description, :class => "form-control"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :content , :class => "control-label" %>
+      <%= f.text_field :content, :class => "form-control"%>
+    </div>
+    <%= f.hidden_field :topic_id %>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<% end %>

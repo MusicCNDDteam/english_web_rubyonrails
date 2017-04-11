@@ -1,0 +1,12 @@
+<h3>Challenges</h3>
+
+
+<ul class="topics list-group">
+  <%= render @quizzes %>
+</ul>
+
+<div style="padding-top: 15px;">
+  <%= link_to 'New Challenge', new_quiz_path(:topic => @topic) , {:class => "primary-link"}%>
+</div>
+
+<br/>

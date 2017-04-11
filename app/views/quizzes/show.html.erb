@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @quiz.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @quiz.description %>
+</p>
+
+<%= render 'shared/quiz_questions' %>
+<%= render 'shared/question_form' %>
+
+<%= link_to 'Edit', edit_quiz_path(@quiz) %> |
+<%= link_to 'Back', quizzes_path %>

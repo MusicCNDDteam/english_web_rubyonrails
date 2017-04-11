@@ -1,0 +1,30 @@
+<%= render 'shared/category_course.html.erb', :category => @category %>
+
+<div align="right" style="padding-top: 15px;">
+  <%= link_to 'Create New Course', new_course_path , {:class => "primary-link"}%>
+</div>
+
+
+<section class="courses-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center pane-header">
+        <h2 class="text-uppercase">Our Courses</h2>
+        <div class="divider"></div>
+        <h5>Courses Store.</h5>
+      </div>
+      <br/>
+      <% @courses.each do |course| %>
+      <div class="col-md-4 ">
+        <div class="pv-30 ph-20 service-block bordered shadow text-center object-non-visible animated object-visible fadeInDownSmall" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+          <span class="icon bg-df circle"><i class="fa fa-diamond"></i></span>
+          <h3><%= course.name %></h3>
+          <div class="divider clearfix"></div>
+          <p><%= course.description %></p>
+          <a href="/courses/<%= course.id %>">Read More <i class="pl-5 fa fa-angle-double-right"></i></a>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>

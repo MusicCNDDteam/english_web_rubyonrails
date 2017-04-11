@@ -1,0 +1,65 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+
+a:hover {
+    background-color: none;
+}
+
+.primary-link {
+  border-radius: 5px;
+  border: 1px solid rgba(9, 175, 223, 0.33);
+  padding: 13px;
+  background: #09afdf;
+  color: white !important;
+}
+
+.second-link {
+  border-radius: 5px;
+  border: 1px solid #e7e7e7;
+  padding: 13px;
+  color: #09afdf;
+}
+
+.profile-avatar {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.profile-avatar {
+  display: inline-block;
+
+  .gravatar {
+    width: 100px;
+    height: 100px;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+}

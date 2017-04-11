@@ -1,0 +1,46 @@
+<% provide(:title, "Edit user") %>
+<h1>Update your profile</h1>
+<p>Your profile informations.</p>
+<br/>
+<div class="container-fluid">
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="text-center">
+        <!-- <div class="profile-avatar">
+          <%= gravatar_for @user %>
+        </div> -->
+        <div class="profile-avatar">
+          <%= image_tag('/images/user/default-avatar.jpg') %>
+        </div>
+        <h6>Upload a different photo...</h6>
+        <input type="file" class="text-center center-block well well-sm">
+      </div>
+    </div>
+
+    <!-- edit form column -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+      <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="form-group">
+        <%= f.label :name , :class => "control-label" %>
+        <%= f.text_field :name , :class => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email, :class => "control-label"  %>
+        <%= f.text_field :email, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password, :class => "control-label"  %>
+        <%= f.password_field :password, :class => "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation, "Confirm Password" , :class => "control-label" %>
+        <%= f.password_field :password_confirmation , :class => "form-control"%>
+      </div>
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
